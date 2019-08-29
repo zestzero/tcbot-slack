@@ -9,12 +9,12 @@ export const sendMessage = (data: Message) => {
 };
 
 export const handleIncomingMessage = (req: Request<Dictionary<string>>, res: Response) => {
-    const command = parseMessage(req.body);
+    const { body, command } = parseMessage(req.body);
     const data: Message = {
         form: {
-            channel: '#tcbot-test',
-            text: 'Hi! :wave: \n I\'m your new bot.',
-            token: Configuration.slackToken,
+            channel: body.channel_id,
+            text: `Hi! :wave: \n I\'m your new bot.`,
+            token: Configuration().slackToken,
         },
     };
     sendMessage(data);

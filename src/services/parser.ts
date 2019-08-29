@@ -1,5 +1,14 @@
+import { SlashRequest } from 'slashRequest';
 import Commands from '../types/command';
 
-export const parseMessage = (message: string): Commands => {
-    return Commands.None;
+interface IParseResult {
+    body: SlashRequest;
+    command: Commands;
+}
+
+export const parseMessage = (body: SlashRequest): IParseResult => {
+    return {
+        body,
+        command: Commands.None,
+    };
 };

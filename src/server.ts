@@ -6,7 +6,7 @@ import * as MessageController from './controllers/message';
 dotenv.config();
 const app = express();
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(process.env.PORT, () => console.log('TCBot started at port 3000!'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
