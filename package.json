@@ -1,0 +1,39 @@
+{
+  "name": "tcbot-slack",
+  "version": "1.0.0",
+  "description": "A bot to let slack communicate with TeamCity API",
+  "main": "dist/server.js",
+  "scripts": {
+    "build-ts": "tsc",
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "watch-ts": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zestzero/tcbot-slack.git"
+  },
+  "author": "Krit B.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zestzero/tcbot-slack/issues"
+  },
+  "homepage": "https://github.com/zestzero/tcbot-slack#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.1",
+    "@types/request": "^2.48.2",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}
